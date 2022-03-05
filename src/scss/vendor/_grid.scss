@@ -1,0 +1,71 @@
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 1200px) {
+  $container-padding: 36px;
+  $columns: 9;
+
+  .container {
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat($columns, 1fr);
+  }
+}
+
+@media (max-width: 1023px) {
+  $container-padding: 72px;
+  $columns: 6;
+
+  .container {
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat($columns, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  $container-padding: 30px;
+
+  .container {
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+  }
+}
+
+@media (max-width: 660px) {
+  $container-padding: 20px;
+
+  .container {
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+  }
+}
+
+@media (max-width: 460px) {
+  $container-padding: 12px;
+
+  .container {
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+  }
+
+  .grid-container {
+    gap: 16px;
+  }
+}
